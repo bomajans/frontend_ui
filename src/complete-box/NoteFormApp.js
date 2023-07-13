@@ -34,7 +34,7 @@ const NoteFormApp = () => {
       setNotes(updatedNotes);
       localStorage.setItem("notes", JSON.stringify(updatedNotes));
     } else {
-      // Notu listenin başına ekle
+      // Eğer daha önce listede olmayan bir notsa, notu listenin başına ekle
       const updatedNotes = [note, ...notes.slice(0, 14)]; // En fazla 15 not tutulacak
       setNotes(updatedNotes);
       localStorage.setItem("notes", JSON.stringify(updatedNotes));

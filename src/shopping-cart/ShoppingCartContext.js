@@ -17,7 +17,7 @@ export const ShoppingCartProvider = ({ children }) => {
     if (existingItem) {
       // Eğer ürün zaten sepette varsa aynı ürünü sepete eklemek yerine sepetteki ürünün adetini artır.
       // Bunu yapmazsak eğer başka sayfada aynı ürün örneğin 3 kez eklenirse,
-      // sepetteyken aynı üründen 5 adet yerine -- A ürünü(3) --, aynı ürün beşer kere sayılacaktır -- A ürünü, A ürünü, A ürünü --
+      // sepetteyken aynı üründen 3 adet yerine -- A ürünü(3) --, aynı ürün üçer kere sayılacaktır -- A ürünü, A ürünü, A ürünü --
       // Buda sepetteyken ürün adetini artırmak için + butonuna bastığımızda ürünü 1 kez artırmak yerine her seferinde 3 kez artıracaktır,
       // Aynı ürünü sürekli sepete ekleyip tek bir ürün altında sayıyı göstermek yerine;
       /*  const addToCart = (item) => {

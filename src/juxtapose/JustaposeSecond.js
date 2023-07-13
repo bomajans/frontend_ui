@@ -21,11 +21,8 @@ const JuxtaposeComponent = () => {
     // Bu, mouse pozisyonunu, konteynerin sol kenarından ne kadar uzakta olduğunu temsil eder.
     // Ardından, newPosition değeri, konteynerin genişliğine (containerWidth) bölünerek yüzde cinsinden bir değer elde edilir.
     // Bu değer, çubuğun konteyner içerisindeki konumunu yüzde olarak temsil eder.
-    // Son olarak, newPosition değeri yüzde olarak ifade edildiği için 0 ile 100 arasında olabilir.
-    // Bu değeri kullanarak çubuğun sadece resimlerin olduğu alanda hareket etmesini sağlamak için uygun bir şekilde sınırlanır.
     const newPosition =
       ((e.clientX - containerRect.left) / containerWidth) * 100;
-
     // Yeni konumu 0 ile 100 arasında sınırlamak, böylece çubuk sadece resimlerin olduğu alanda hareket eder.
     // Math.min(newPosition, 100) ifadesi, newPosition değerini ve 100 değerini karşılaştırır ve daha küçük olan değeri döndürür.
     // Bu, newPosition'ın en fazla 100 olmasını sağlar.
@@ -34,6 +31,7 @@ const JuxtaposeComponent = () => {
     // Örneğin newPosition değeri 120 olsun. Math.min(newPosition, 100) ifadesi, 100 değerini döndürecektir,
     // çünkü 120 100'den daha büyüktür. Ardından, Math.max(0, 100) ifadesi, 100 değerini döndürecektir,
     // çünkü 100 0'dan daha büyüktür. Sonuç olarak, clampedPosition değeri 100 olacaktır.
+    // Sonuç olarak clampedPosition değeri ile sadece resimlerin olduğu alanda hareket edilmesini sağlamak için sınırlı bir alan uygun bir şekilde belirlenir.
     const clampedPosition = Math.max(0, Math.min(newPosition, 100));
     setPosition(clampedPosition);
   };
