@@ -23,6 +23,9 @@ const Navbar = () => {
         <li>
           <Link to="/juxtapose">Juxtapose</Link>
         </li>
+        <li>
+          <Link to="/section">Section(tıkladıkdan sonra aşağı kaydır)</Link>
+        </li>
       </ul>
     </nav>
   );

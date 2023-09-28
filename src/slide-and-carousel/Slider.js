@@ -25,11 +25,17 @@ const Slider = ({ images }) => {
 
   // Slider bileşenini oluşturan JSX'i döndürür.
   return (
-    <div>
+    <div className="slider-container">
       <button onClick={handlePrevious}>Önceki</button>
-      {/* images dizisindeki mevcut resmi görüntüler */}
-      <img width={300} height={300} src={images[currentIndex]} alt="" />
       <button onClick={handleNext}>Sonraki</button>
+      {images.map((image, index) => (
+        <img
+          key={index}
+          className={`slider-img ${index === currentIndex ? "active" : ""}`}
+          src={image}
+          alt=""
+        />
+      ))}
     </div>
   );
 };

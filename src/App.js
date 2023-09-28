@@ -10,6 +10,7 @@ import JustaposeSecond from "./complete-box/NoteFormApp";
 
 import { ShoppingCartProvider } from "./shopping-cart/ShoppingCartContext";
 import JuxtaposeComponent from "./juxtapose/JuxtaposeComponent";
+import Section from "./scroll-component-anime/Section";
 const App = () => {
   return (
     <ShoppingCartProvider>
@@ -23,6 +24,7 @@ const App = () => {
             <Route path="/note" element={<NoteFormApp />} />
             <Route path="/juxtapose" element={<JuxtaposeComponent />} />
             <Route path="/juxtapose-second" element={<JustaposeSecond />} />
+            <Route path="/section" element={<Section />} />
           </Routes>
         </div>
       </BrowserRouter>

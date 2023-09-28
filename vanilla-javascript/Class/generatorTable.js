@@ -35,7 +35,6 @@ class Table {
     //Row inputuna girilen değere kadar dönmek
     for (let r = 1; r <= this.rowsNumber; r++) {
       let tr = "<tr>";
-
       //Column inputuna girilen değere kadar dönmek. Row'la içiçeler ki senkronize şekilde iki farklı input değerine göre kutular oluşsun.
       for (let c = 1; c <= this.columnsNumber; c++) {
         //Hem toplam kutu sayısına ulaşmak, hemde kutulara kendi sayılarını vermek için, r ve c değerlerini input değerlerine kadar çarpmak.
